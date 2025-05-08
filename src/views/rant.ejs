@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3º Infonet</title>
+    <link rel="shortcut icon" type="imagex/png" href="./img/cadeado.svg">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/pag-si.css">
+    <style>
+        footer{
+            margin-top: 0;
+        }
+        main{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../img/Infonet.png" alt="Infonet_title">
+        <a href="/"></a>
+    </header>
+    <main>
+        <section class="container1" id="topicos">
+            <p class="title">Introdução</p>
+            <p class="title">Conceitos básicos sobre cyber segurança</p>
+            <div class="container-topicos">
+                <div class="topicos" id="#topicos">
+                    <p>Tópico 1</p>
+                    <p>Cibersegurança é o conjunto de práticas e tecnologias para proteger dados e sistemas contra ataques digitais. Isso inclui manter a confidencialidade, integridade e disponibilidade das informações, garantindo que só quem tem permissão possa acessá-las.</p>
+                </div>
+                <div class="topicos">
+                    <p>Tópico 2</p>
+                    <p>Entre as ameaças mais comuns estão malware, ransomware, phishing e ataques DDoS. Elas podem roubar dados, sequestrar sistemas ou causar falhas graves. Conhecer essas ameaças é o primeiro passo para saber como enfrentá-las.</p>
+                </div>
+                <div class="topicos">
+                    <p>Tópico 3 </p>
+                    <p>Adotar boas práticas é essencial: use senhas únicas, ative autenticação em duas etapas, evite redes Wi-Fi públicas sem proteção e desconfie de links e e-mails suspeitos. Pequenas atitudes fazem grande diferença para acessar os navegadores com plenitude.</p>
+                </div>
+                <div class="topicos">
+                    <p>Tópico 4</p>
+                    <p>Phishing é uma técnica de engano onde criminosos se passam por empresas confiáveis para roubar seus dados, utilizando uma interface clonada. Isso pode vir por e-mails falsos, mensagens ou sites minuciosamente duplicados. Ficar atento é a melhor defesa!</p>
+                </div>
+            </div>
+        </section>
+        <div class="hr"></div>
+        
+        <section class="container2" id="protecao">
+            <p>Como se <br><span style="color: #571088;">proteger?</span></p>
+            <section>
+                <div class="container-dicas">
+                    <div class="dicas">
+                        <img src="../img/cerebro.svg" alt="">
+                        <div class="texto-dicas">
+                            <p>Responsabilidade Virtual</p>
+                            <p>Tenha consciência do que você acessa e compartilha na internet. Evite clicar em links desconhecidos, desconfie de promoções milagrosas e não forneça informações pessoais em qualquer site.</p>
+                        </div>
+                    </div>
+                    <br><br><br>
+
+                    <div class="dicas">
+                        <img src="../img/escudo.svg" alt="">
+                        <div class="texto-dicas">
+                            <p>Softwares e Atualizações</p>
+                            <p>Manter sistemas, aplicativos, fornecedores VPN e antivírus atualizados é essencial; pois são corrigidas falhas de segurança que podem ser exploradas por invasores. Não deixe para depois!</p>
+                        </div>
+                    </div>
+                    <br><br><br>
+
+                    <div class="dicas">
+                        <img src="../img/mundo-cadeado.svg" alt="">
+                        <div class="texto-dicas">
+                            <p>Passes confiáveis</p>
+                            <p>Use senhas longas, misturando letras, números e símbolos, de acordo com a peculiaridade ideal. Evite usar a mesma senha em diferentes serviços e considere gerenciadores de senha para manter tudo seguro e organizado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gatito">
+                    <img src="../img/caveira.svg" alt="gatito">
+                </div>
+            </section>
+            <br><br><br>
+        </section>
+        <div class="hr"></div>
+
+        <section class="container3" id="hash">
+            <div class="hash-title">
+                <p>Hash</p>
+                <p>Tipos e Práticas</p>
+            </div>
+
+            <div class="container-hash-tips">
+                <div class="hashs-tip">
+                    <p>BYCRIPT</p>
+                    <p>Um algorítmo de senha usado para armazenar e verificar senhas de forma segura, conhecido por ser um método criptográfico robusto e adaptativo, resistente a ataques de força bruta.</p>
+                </div>
+                <div class="hashs-tip">
+                    <p>SHA-1</p>
+                    <p>Algorítmo de hash mais antigo, usado para verificar a integridade de dados. Embora já tenha sido popular, hoje ele é considerado vulnerável a ataques modernos e foi substituído por métodos mais seguros.</p>
+                </div>
+                
+            </div>
+
+            <div class="container-gerar-hash">
+                <p>Gerador de Hash</p>
+                <section class="input-hash">
+
+                    <form action="" method="post" id="tabel-hash">
+
+                        <input class="hash" id="input_hash" type="text" name="nome"  placeholder="Digite um texto para ser criptografado..." size="30">
+                        <button class="send-hash-btn">Enviar</button>
+                
+                    </form>
+
+                    <!-- <input class="hash" id="input_hash" type="text" placeholder="Digite um texto para ser criptografado">
+                    <button onclick="tabela_hash()" class="send-hash-btn">Enviar</button> -->
+                </section>
+            </div>
+
+            <div class="container-tabela-hash">
+                <div class="tabela" id="tabela-resul-hash">
+
+                    <div class="linha">
+                        <%if(valor){%>
+                        <div class="item">Sua string</div>
+                        <div class="conteudo" id="pala_digit" style="color: #7b1abc;"><%-valor%></div>
+                        <%}%>
+                    </div>
+
+                    <div class="linha">
+                        <%if(bcrypt){%>
+                        <div class="item">Bycrypt Hash</div>
+                        <div class="conteudo" id="bycript-hash-div"><%-bcrypt%></div>
+                        <%}%>
+                    </div>
+                    <div class="linha" style="border: none;">
+                        <%if(sha1){%>
+                        <div class="item">SHA1 Hash</div>
+                        <div class="conteudo" id="sha-1-hash-div"><%-sha1%></div>
+                        <%}%>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>
+    </main>
+    
+    <footer>
+        © Copyright 2025 Terceiro Infonet | Todos os direitos reservados
+    </footer>
+
+    <%if(scrollTo){%>
+        <script>
+            window.scrollTo(0, 2400)
+        </script>
+    <%}%>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
